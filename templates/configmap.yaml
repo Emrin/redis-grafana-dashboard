@@ -13,7 +13,7 @@ data:
   redis-dashboard.json: |-
     {{- if .Values.datasource }}
     {{- $json := .Files.Get "dashboards/redis-dashboard.json" | fromJson }}
-    {{- $json | mustDeepCopy | set "templating" "list" (map "name" "DS_PROMETHEUS" "type" "datasource" "query" "prometheus" "current" (map "selected" true "text" .Values.datasource "value" .Values.datasource)) | toJson | nindent 4 }}
+    {{- $json | mustDeepCopy | set "templating" "list" (dict "name" "DS_PROMETHEUS" "type" "datasource" "query" "prometheus" "current" (dict "selected" true "text" .Values.datasource "value" .Values.datasource)) | toJson | nindent 4 }}
     {{- else }}
     {{ .Files.Get "dashboards/redis-dashboard.json" | nindent 4 }}
     {{- end }}
