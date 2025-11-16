@@ -1,5 +1,7 @@
 # Redis Grafana Dashboard Helm Chart
 
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/redis-grafana-dashboard)](https://artifacthub.io/packages/search?repo=redis-grafana-dashboard)
+
 ![Redis Dashboard Screenshot](https://grafana.com/api/dashboards/16056/images/11960/image)
 
 This Helm chart provisions the Opstree Redis Dashboard (Grafana ID 16056) as a ConfigMap. It's automatically imported into Grafana via the sidecar in the [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) Helm chart, saving you from manual uploads.
