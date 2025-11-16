@@ -1,0 +1,17 @@
+# Default values for redis-grafana-dashboard.
+
+# Name of the ConfigMap resource
+name: redis-dashboard
+
+# Namespace where the ConfigMap will be created (should match your Grafana namespace)
+namespace: monitoring
+
+# Label key for the Grafana sidecar to detect the dashboard (default matches kube-prometheus-stack)
+label: grafana_dashboard
+
+# Optional: Grafana folder to place the dashboard in (adds an annotation to the ConfigMap)
+folder: ""
+
+# Optional: If set, replaces the datasource in the dashboard JSON (e.g., for custom Prometheus names)
+# Leave empty to use the dashboard's default (usually "Prometheus")
+datasource: ""

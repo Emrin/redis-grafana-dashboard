@@ -1,0 +1,18 @@
+apiVersion: v2
+name: redis-grafana-dashboard
+description: A Helm chart that provisions the Opstree Redis Grafana Dashboard (ID 16056) as a ConfigMap for automatic import via the kube-prometheus-stack sidecar.
+version: 0.1.0
+appVersion: "3"
+type: application
+keywords:
+  - grafana
+  - dashboard
+  - redis
+  - monitoring
+  - prometheus
+home: https://github.com/Emrin/redis-grafana-dashboard
+sources:
+  - https://github.com/Emrin/redis-grafana-dashboard
+maintainers:
+  - name: Emrin Angelov
+    url: https://github.com/Emrin
